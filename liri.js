@@ -37,7 +37,7 @@ let testForEmpty = regex.test(secondCommand)
 //Accounting for all possible user inputs
 
 
-console.log(testForEmpty)
+// console.log(testForEmpty)
 
 
 //Bands in town API
@@ -124,8 +124,13 @@ let doWhatItSays = () => {
             // console.log(txtArray)
             firstCommand = txtArray[0];
             secondCommand = txtArray[1]
-            
+            let doCommands = `Do What It Says: ${firstCommand}, ${secondCommand}`
             spotifyThis(secondCommand)
+            fs.appendFile('log.txt', doCommands, (err) => {
+                if(err){
+                    return err
+                }
+            })
         }
     })
 }
@@ -135,7 +140,7 @@ let doWhatItSays = () => {
 // Write the Code You wish You had (WCYWYH)
 switch(firstCommand) {
     case 'help':
-        console.log(`Commands = spotify-this-song, movie-this, concert-this`)
+        console.log(`Commands\nspotify-this-song\nmovie-this \nconcert-this\ndo-what-it-says`)
         break;
     case 'spotify-this-song':
        testForEmpty === true ? spotifyThis('Satisfaction') : spotifyThis(secondCommand)
@@ -156,7 +161,7 @@ switch(firstCommand) {
 }   
 
 
-
+console.log(`Type 'help' to view the list of commands`)
 
 
 

@@ -5,3 +5,6 @@
 
  Command: spotify-this-song, Artist: Tobacco, Song Name: Streaker (feat. Notrabel), 
             Album: Ultima II Massage, Release Date: 2014-05-13 
+Do What It Says: spotify-this-song, Never Gonna Give you Up
+ Command: spotify-this-song, Artist: Rick Astley, Song Name: Never Gonna Give You Up, 
+            Album: Whenever You Need Somebody, Release Date: 1987-12-08 
