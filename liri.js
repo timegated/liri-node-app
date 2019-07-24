@@ -37,20 +37,21 @@ let testForEmpty = regex.test(secondCommand)
 //Accounting for all possible user inputs
 
 
-
+console.log(testForEmpty)
 
 
 //Bands in town API
 let concertThis = (artist) => {
     let queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + bands
     axios.get(queryURL).then((response) => {
-        for(let i = 0; i < response.data.length; i++) {
+        for(let i = 0; i < 1; i++) {
             let currentData = response.data[i]
-            console.log(JSON.stringify(currentData.venue, null, 2))
-            // console.log(`Venue: ${currentData.venue.name}`)
-            // console.log(`City: ${currentData.venue.city}, Country: ${currentData.venue.country}`)
-            // console.log(`Date: ${moment(currentData.datetime).format('LL')}`)
+            console.log(secondCommand)
+            console.log(`Venue: ${currentData.venue.name}`)
+            console.log(`City: ${currentData.venue.city}, Country: ${currentData.venue.country}`)
+            console.log(`Date: ${moment(currentData.datetime).format('LL')}`)
             
+          
            
         }
     }).catch((error) => {
@@ -82,16 +83,32 @@ let spotifyThis = (songName) => {
         if(err) {
             console.log('You have made an error of some kind')
         }
+        
+        
+        console.log(data.tracks.items[0].album.images[0].url)
         for(let i = 0; i < data.tracks.items.length; i++) {
             let getData =  data.tracks.items[i]
-            // console.log(getData)
+            
             console.log(`Artist: ${getData.artists[0].name}`)
             console.log(`Song Name: ${getData.name}`)
             console.log(`Album: ${getData.album.name}`)
             console.log(`Release Date: ${getData.album.release_date}`)
+            console.log(`Album Cover: ${getData.album.images[0].url}`)
             console.log(`Preview: ${getData.preview_url}`)
+
+            let logSongInfo = `Command: ${firstCommand}, Artist: ${getData.artists[0].name}, Song Name: ${getData.name}, 
+            Album: ${getData.album.name}, Release Date: ${getData.album.release_date}`
+
+            fs.appendFile('log.txt', `\n ${logSongInfo} \n`, (err) => {
+                if(err) {
+                    return err
+                }
+            })
+            
         }
-         
+        
+       
+       
         
     })
 }
@@ -117,6 +134,9 @@ let doWhatItSays = () => {
 // When bot receives movie-this command, executes api call
 // Write the Code You wish You had (WCYWYH)
 switch(firstCommand) {
+    case 'help':
+        console.log(`Commands = spotify-this-song, movie-this, concert-this`)
+        break;
     case 'spotify-this-song':
        testForEmpty === true ? spotifyThis('Satisfaction') : spotifyThis(secondCommand)
         break;
