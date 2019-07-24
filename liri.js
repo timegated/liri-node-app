@@ -27,15 +27,15 @@ const bands = keys.BANDSINTOWN.id
 const spotify = new Spotify(keys.Spotify);
 
 //Enclosing CLI commands in functions
-
 let firstCommand = process.argv[2]
 let secondCommand = process.argv.slice(3).join(' ')
-
-//Accounting for all possible user inputs
 
 let regex = /^\s*$/
 
 let testForEmpty = regex.test(secondCommand)
+
+//Accounting for all possible user inputs
+
 
 
 
@@ -97,8 +97,22 @@ let spotifyThis = (songName) => {
 }
 
 let doWhatItSays = () => {
-    
+    fs.readFile('random.txt', 'utf8', (err, data) => {
+        if(err) {
+            console.log(`You've made an error of some kind`)
+        }
+        
+        if(data) {
+            let txtArray = data.split(',')
+            // console.log(txtArray)
+            firstCommand = txtArray[0];
+            secondCommand = txtArray[1]
+            
+            spotifyThis(secondCommand)
+        }
+    })
 }
+
 //'movie-this' next command
 // When bot receives movie-this command, executes api call
 // Write the Code You wish You had (WCYWYH)
@@ -113,12 +127,13 @@ switch(firstCommand) {
        testForEmpty === true ? concertThis('Hot Chip') : concertThis(secondCommand)
         break;
     case 'do-what-it-says':
+        //Get RickRolled
+        doWhatItSays()
         break;
     default:
        console.log('enter a valid command')
     
 }   
-    
 
 
 
