@@ -1,7 +1,7 @@
 # liri-node-app
 **Command Line Interface Bot Created Using Node JS**
 
-**Tech:**
+**Tech
 *Node JS
 *JavaSript
 
