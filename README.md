@@ -5,10 +5,11 @@ Tech:
   <li>NodeJS</li>
   <li>JS</li>
 </ul>
+<hr>
 Instead of googling or getting the information on a song, movie, or when and where an artist you're interested in is performing next you can use this tool to look those things up right away if you know your way around the command line.
 
 Liri works from the command line and returns information based on what command is used and what other argument is specified after the initial command. 
-
+<hr>
 
 *If no specific song, movie, or concert venue is specified, liri will return a default song, movie, or concert venue.* 
 **************************************
