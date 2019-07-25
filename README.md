@@ -1,10 +1,10 @@
 # liri-node-app
 **Command Line Interface Bot Created Using Node JS**
-
-**Tech
-*Node JS
-*JavaSript
-
+Tech:
+<ul>
+  <li>NodeJS</li>
+  <li>JS</li>
+</ul>
 Instead of googling or getting the information on a song, movie, or when and where an artist you're interested in is performing next you can use this tool to look those things up right away if you know your way around the command line.
 
 Liri works from the command line and returns information based on what command is used and what other argument is specified after the initial command. 
