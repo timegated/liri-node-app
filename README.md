@@ -6,24 +6,24 @@ Instead of googling or getting the information on a song, movie, or when and whe
 
 Liri works from the command line and returns information based on what command is used and what other argument is specified after the initial command. 
 
-If no specific song, movie, or concert venue is specified, liri will return a default song, movie, or concert venue. 
+*If no specific song, movie, or concert venue is specified, liri will return a default song, movie, or concert venue.* 
 **************************************
-List of Commands:
-'spotify-this-song' (-name of song-)
+**List of Commands:**
+**'spotify-this-song' (-name of song-)**
 will return information related to whatever song name you provide:
 link to the url,
 the name of the artist,
 the name of the album,
 and year album was released
 **************************************
-'concert-this' (-name of artist-):
+**'concert-this' (-name of artist-):**
 will return the locations the artist will be performing:
 name of the venue,
 name of the country,
 and the date of the performance
 as well as the line up of artists performing (if there is a show and there are other artists.)
 **************************************
-'movie-this' (-name of movie-)
+**'movie-this' (-name of movie-)**
 
 will return information about the movie,
 movie Title,
@@ -31,8 +31,8 @@ movie Release Date,
 movie Rating on IMDB
 
 **************************************
-'do-what-it-says'
-Returns information on the song "Never Gonna Give You Up", a song revived by meme culture and became part of a practice known as "Rick Rolling"
+**'do-what-it-says'**
+Returns information on the song "I Want It That Way".
 **************************************
 
 

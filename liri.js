@@ -67,7 +67,7 @@ let concertThis = (artist) => {
            
         }
     }).catch((error) => {
-        console.log(`${error} You have made an error of some kind`)
+        console.log(`${error} No upcoming show`)
     })
 }
 //OMDB Movie API - search for information on movies

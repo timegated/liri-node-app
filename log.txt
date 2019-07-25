@@ -1,10 +1,1 @@
 
-Command: concert-this,
- Venue: Domaine National de Saint-Cloud, City:Paris, 
-            Country: France, Date:2019-08-23T19:00:00
-Command: concert-this,
- Venue: Sleeping Village, City:Chicago, 
-            Country: United States, Date:2019-09-27T21:30:00
-Command: concert-this,
- Venue: Les Nuits Secrètes, City:Aulnoye-aymeries, 
-            Country: France, Date:2019-07-26T19:00:22
