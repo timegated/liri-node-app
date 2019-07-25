@@ -1,9 +1,9 @@
 # liri-node-app
-#Command Line Interface Bot Created Using Node JS
+**Command Line Interface Bot Created Using Node JS**
 
-###Tech used
-**NodeJS**
-**JavaScript**
+Tech:
+-**NodeJS**
+-**JavaScript**
 
 Instead of googling or getting the information on a song, movie, or when and where an artist you're interested in is performing next you can use this tool to look those things up right away if you know your way around the command line.
 
@@ -40,7 +40,7 @@ movie Rating on IMDB
 Returns information on the song "I Want It That Way".
 **************************************
 
-####Video Demonstration: https://drive.google.com/file/d/1CkzO1y2nPw2nChjGv_S0hQyMq93r4uWn/view
+**Video Demonstration:** https://drive.google.com/file/d/1CkzO1y2nPw2nChjGv_S0hQyMq93r4uWn/view
 
 
 
