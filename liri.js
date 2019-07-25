@@ -166,7 +166,7 @@ switch(firstCommand) {
         console.log(`Commands\nspotify-this-song\nmovie-this \nconcert-this\ndo-what-it-says`)
         break;
     case 'spotify-this-song':
-       testForEmpty === true ? spotifyThis('The Sign') : spotifyThis(secondCommand)
+       testForEmpty === true ? spotifyThis('Ace of Base') : spotifyThis(secondCommand)
         break;
     case 'movie-this':
        testForEmpty === true ? movieThis('Mr. Nobody') : movieThis(secondCommand)

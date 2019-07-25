@@ -19,3 +19,74 @@ Do What It Says: spotify-this-song
 Command: spotify-this-song,
  Artist: Backstreet Boys, Song Name: I Want It That Way, 
             Album: The Hits--Chapter One, Release Date: 2001-10-23 
+
+Command: concert-this,
+ Venue: Les Nuits Secrètes, City:Aulnoye-aymeries, 
+            Country: France, Date:2019-07-26T19:00:22
+ 
+Command: spotify-this-song,
+ Artist: Lil Wayne, Song Name: Scared of the Dark (feat. XXXTENTACION), 
+            Album: Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture), Release Date: 2018-12-14 
+
+ 
+Command:movie-this,
+ Title Mr. Nobody, Release Date 2009, 
+        IMDB Belgium, Germany, Canada, France, USA, UK
+
+Do What It Says: spotify-this-song
+, I Want It That Way
+ 
+Command: spotify-this-song,
+ Artist: Backstreet Boys, Song Name: I Want It That Way, 
+            Album: The Hits--Chapter One, Release Date: 2001-10-23 
+
+ 
+Command:movie-this,
+ Title The Godfather, Release Date 1972, 
+        IMDB USA
+
+Command: concert-this,
+ Venue: Domaine National de Saint-Cloud, City:Paris, 
+            Country: France, Date:2019-08-23T19:00:00
+Command: concert-this,
+ Venue: Dell East Music Center, City:Philadelphia, 
+            Country: United States, Date:2019-09-05T19:00:00
+ 
+Command: spotify-this-song,
+ Artist: Liars, Song Name: No.1 Against the Rush, 
+            Album: WIXIW, Release Date: 2012 
+
+ 
+Command: spotify-this-song,
+ Artist: Ace of Base, Song Name: The Sign, 
+            Album: The Sign (US Album) [Remastered], Release Date: 1993 
+
+ 
+Command: spotify-this-song,
+ Artist: Ace of Base, Song Name: The Sign, 
+            Album: The Sign (US Album) [Remastered], Release Date: 1993 
+
+ 
+Command:movie-this,
+ Title Mr. Nobody, Release Date 2009, 
+        IMDB Belgium, Germany, Canada, France, USA, UK
+
+Command: concert-this,
+ Venue: Les Nuits Secrètes, City:Aulnoye-aymeries, 
+            Country: France, Date:2019-07-26T19:00:22
+Do What It Says: spotify-this-song
+, I Want It That Way
+ 
+Command: spotify-this-song,
+ Artist: Backstreet Boys, Song Name: I Want It That Way, 
+            Album: The Hits--Chapter One, Release Date: 2001-10-23 
+
+ 
+Command: spotify-this-song,
+ Artist: Metronomy, Song Name: Reservoir, 
+            Album: Love Letters, Release Date: 2014-03-10 
+
+ 
+Command: spotify-this-song,
+ Artist: Ace of Base, Song Name: The Sign, 
+            Album: The Sign (US Album) [Remastered], Release Date: 1993 

@@ -16,6 +16,7 @@ link to the url,
 the name of the artist,
 the name of the album,
 and year album was released
+You can add the name of the artist to the song if you type the song name in and it does not return what you had in mind.
 **************************************
 **'concert-this' (-name of artist-):**
 will return the locations the artist will be performing:
@@ -35,6 +36,8 @@ movie Rating on IMDB
 **'do-what-it-says'**
 Returns information on the song "I Want It That Way".
 **************************************
+
+Video Demonstration: https://drive.google.com/file/d/1CkzO1y2nPw2nChjGv_S0hQyMq93r4uWn/view
 
 
 
