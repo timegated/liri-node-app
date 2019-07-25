@@ -46,9 +46,9 @@ Returns information on the song "I Want It That Way".
 <hr>
 <h3>Images</h3>
 <ul>
-<li><img src="./images/liri-concert-this.PNG"></li>
-<li><img src="./images/liri-do-what-it-says.PNG"></li>
-<li><img src="./images/liri-movie-this.PNG"></li>
+<li><img style="width: 150px;" src="./images/liri-concert-this.PNG"></li>
+<li><img style="width: 150px;" src="./images/liri-do-what-it-says.PNG"></li>
+<li><img style="width: 150px;" src="./images/liri-movie-this.PNG"></li>
 </ul>
 
 
