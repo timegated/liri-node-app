@@ -43,6 +43,7 @@ let testForEmpty = regex.test(secondCommand)
 //Bands in town API
 let concertThis = (artist) => {
     let queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + bands
+  
     axios.get(queryURL).then((response) => {
         for(let i = 0; i < 1; i++) {
             let currentData = response.data[i]
@@ -50,8 +51,13 @@ let concertThis = (artist) => {
             console.log(`Venue: ${currentData.venue.name}`)
             console.log(`City: ${currentData.venue.city}, Country: ${currentData.venue.country}`)
             console.log(`Date: ${moment(currentData.datetime).format('LL')}`)
-            
-          
+            let venue = `\nCommand: ${firstCommand},\n Venue: ${currentData.venue.name}, City:${currentData.venue.city}, 
+            Country: ${currentData.venue.country}, Date:${currentData.datetime}`
+          fs.appendFile("log.txt", venue, (err) => {
+              if(err) {
+                  return err
+              }
+          })
            
         }
     }).catch((error) => {
@@ -72,6 +78,16 @@ let movieThis = (movieName) => {
         const rottenTomatoeObj = response.data.Ratings[1]
         const value = Object.values(rottenTomatoeObj)
         console.log(`The score on ${value[0]} is ${value[1]}`)
+
+
+        const movieData = `\nCommand:${firstCommand},\n Title ${response.data.Title}, Release Date ${response.data.Year}, 
+        IMDB ${response.data.Country}`
+
+        fs.appendFileSync('log.txt', `\n ${movieData}\n`, (err) => {
+            if(err) {
+                return err
+            }
+        })
     }).catch((error) => {
         console.log(`${error} You have made an error of some kind`)
     })
@@ -96,7 +112,7 @@ let spotifyThis = (songName) => {
             console.log(`Album Cover: ${getData.album.images[0].url}`)
             console.log(`Preview: ${getData.preview_url}`)
 
-            let logSongInfo = `Command: ${firstCommand}, Artist: ${getData.artists[0].name}, Song Name: ${getData.name}, 
+            let logSongInfo = `\nCommand: ${firstCommand},\n Artist: ${getData.artists[0].name}, Song Name: ${getData.name}, 
             Album: ${getData.album.name}, Release Date: ${getData.album.release_date}`
 
             fs.appendFile('log.txt', `\n ${logSongInfo} \n`, (err) => {
@@ -124,7 +140,7 @@ let doWhatItSays = () => {
             // console.log(txtArray)
             firstCommand = txtArray[0];
             secondCommand = txtArray[1]
-            let doCommands = `Do What It Says: ${firstCommand}, ${secondCommand}`
+            let doCommands = `\nDo What It Says: ${firstCommand}\n, ${secondCommand}`
             spotifyThis(secondCommand)
             fs.appendFile('log.txt', doCommands, (err) => {
                 if(err){
@@ -134,6 +150,7 @@ let doWhatItSays = () => {
         }
     })
 }
+
 
 //'movie-this' next command
 // When bot receives movie-this command, executes api call
@@ -161,7 +178,6 @@ switch(firstCommand) {
 }   
 
 
-console.log(`Type 'help' to view the list of commands`)
 
 
 
