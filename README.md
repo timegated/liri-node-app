@@ -1,6 +1,9 @@
 # liri-node-app
 Language Interpretation Bot
 
+
+Instead of googling or getting the information on a song, movie, or when and where an artist you're interested in is performing next you can use this tool to look those things up right away if you know your way around the command line.
+
 Liri works from the command line and returns information based on what command is used and what other argument is specified after the initial command. 
 
 If no specific song, movie, or concert venue is specified, liri will return a default song, movie, or concert venue. 
@@ -18,6 +21,7 @@ will return the locations the artist will be performing:
 name of the venue,
 name of the country,
 and the date of the performance
+as well as the line up of artists performing (if there is a show and there are other artists.)
 **************************************
 'movie-this' (-name of movie-)
 
@@ -28,9 +32,8 @@ movie Rating on IMDB
 
 **************************************
 'do-what-it-says'
-
+Returns information on the song "Never Gonna Give You Up", a song revived by meme culture and became part of a practice known as "Rick Rolling"
 **************************************
 
-Returns information about the song listed inside the random.txt file.
 
-**************************************
+

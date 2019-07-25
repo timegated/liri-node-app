@@ -1,21 +1,10 @@
 
- 
-Command:movie-this,
- Title Mr. Nobody, Release Date 2009, 
-        IMDB Belgium, Germany, Canada, France, USA, UK
-
- 
-Command: spotify-this-song,
- Artist: The Rolling Stones, Song Name: (I Can't Get No) Satisfaction - Mono Version, 
-            Album: Out Of Our Heads, Release Date: 1965-07-30 
-
+Command: concert-this,
+ Venue: Domaine National de Saint-Cloud, City:Paris, 
+            Country: France, Date:2019-08-23T19:00:00
+Command: concert-this,
+ Venue: Sleeping Village, City:Chicago, 
+            Country: United States, Date:2019-09-27T21:30:00
 Command: concert-this,
  Venue: Les Nuits Secrètes, City:Aulnoye-aymeries, 
             Country: France, Date:2019-07-26T19:00:22
-
-Do What It Says: spotify-this-song
-, Never Gonna Give you Up
- 
-Command: spotify-this-song,
- Artist: Rick Astley, Song Name: Never Gonna Give You Up, 
-            Album: Whenever You Need Somebody, Release Date: 1987-12-08 

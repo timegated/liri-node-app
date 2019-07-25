@@ -25,11 +25,10 @@ const bands = keys.BANDSINTOWN.id
 // console.log(omdb)
 //Keys for api calls
 const spotify = new Spotify(keys.Spotify);
-
-//Enclosing CLI commands in functions
+//CLI Commands
 let firstCommand = process.argv[2]
 let secondCommand = process.argv.slice(3).join(' ')
-
+//Checks if there is a second command, tests for true/false. See Switch Statement
 let regex = /^\s*$/
 
 let testForEmpty = regex.test(secondCommand)
@@ -40,7 +39,7 @@ let testForEmpty = regex.test(secondCommand)
 // console.log(testForEmpty)
 
 
-//Bands in town API
+//Bands in town API search for concert information if there is any, also works for comedians apparently
 let concertThis = (artist) => {
     let queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=" + bands
   
@@ -48,6 +47,13 @@ let concertThis = (artist) => {
         for(let i = 0; i < 1; i++) {
             let currentData = response.data[i]
             console.log(secondCommand)
+            //Logging the lineup if there are any other artists at the show.
+            let newLineUp = []
+            for(let l = 0; l < currentData.lineup.length;l++){
+                newLineUp.push(currentData.lineup[l])
+                
+            }
+            console.log(`Lineup: ${newLineUp.join(" , ")}`)
             console.log(`Venue: ${currentData.venue.name}`)
             console.log(`City: ${currentData.venue.city}, Country: ${currentData.venue.country}`)
             console.log(`Date: ${moment(currentData.datetime).format('LL')}`)
@@ -64,7 +70,7 @@ let concertThis = (artist) => {
         console.log(`${error} You have made an error of some kind`)
     })
 }
-
+//OMDB Movie API - search for information on movies
 let movieThis = (movieName) => {
     let queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey="+ omdb;
     axios.get(queryURL).then((response)=>{
@@ -82,7 +88,7 @@ let movieThis = (movieName) => {
 
         const movieData = `\nCommand:${firstCommand},\n Title ${response.data.Title}, Release Date ${response.data.Year}, 
         IMDB ${response.data.Country}`
-
+        //Appends new text to log.txt
         fs.appendFileSync('log.txt', `\n ${movieData}\n`, (err) => {
             if(err) {
                 return err
@@ -93,7 +99,7 @@ let movieThis = (movieName) => {
     })
 }
 
-
+//Search for a song using the Spotify API
 let spotifyThis = (songName) => {
     spotify.search({type: 'track', query: songName, limit: 1}, (err, data)=> {
         if(err) {
@@ -101,7 +107,7 @@ let spotifyThis = (songName) => {
         }
         
         
-        console.log(data.tracks.items[0].album.images[0].url)
+       
         for(let i = 0; i < data.tracks.items.length; i++) {
             let getData =  data.tracks.items[i]
             
@@ -128,7 +134,7 @@ let spotifyThis = (songName) => {
         
     })
 }
-
+//Takes command in random.txt and performs a spotify-api search
 let doWhatItSays = () => {
     fs.readFile('random.txt', 'utf8', (err, data) => {
         if(err) {
@@ -160,7 +166,7 @@ switch(firstCommand) {
         console.log(`Commands\nspotify-this-song\nmovie-this \nconcert-this\ndo-what-it-says`)
         break;
     case 'spotify-this-song':
-       testForEmpty === true ? spotifyThis('Satisfaction') : spotifyThis(secondCommand)
+       testForEmpty === true ? spotifyThis('The Sign') : spotifyThis(secondCommand)
         break;
     case 'movie-this':
        testForEmpty === true ? movieThis('Mr. Nobody') : movieThis(secondCommand)
@@ -169,7 +175,7 @@ switch(firstCommand) {
        testForEmpty === true ? concertThis('Hot Chip') : concertThis(secondCommand)
         break;
     case 'do-what-it-says':
-        //Get RickRolled
+        
         doWhatItSays()
         break;
     default:
