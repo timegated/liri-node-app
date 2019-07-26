@@ -143,11 +143,22 @@ let doWhatItSays = () => {
         
         if(data) {
             let txtArray = data.split(',')
-            // console.log(txtArray)
-            firstCommand = txtArray[0];
-            secondCommand = txtArray[1]
+            switch (txtArray[0]) {
+                case "concert-this":
+                    concertThis(txtArray[1])
+                    break;
+                case "spotify-this-song":
+                    spotifyThis(txtArray[1])
+                    break;
+                case "movie-this":
+                    movieThis(txtArray[1])
+                    break;
+                default:
+                    console.log('no valid commands here')
+            }
+            
+            
             let doCommands = `\nDo What It Says: ${firstCommand}\n, ${secondCommand}`
-            spotifyThis(secondCommand)
             fs.appendFile('log.txt', doCommands, (err) => {
                 if(err){
                     return err
@@ -175,8 +186,8 @@ switch(firstCommand) {
        testForEmpty === true ? concertThis('Hot Chip') : concertThis(secondCommand)
         break;
     case 'do-what-it-says':
-        
         doWhatItSays()
+       
         break;
     default:
        console.log('enter a valid command')
